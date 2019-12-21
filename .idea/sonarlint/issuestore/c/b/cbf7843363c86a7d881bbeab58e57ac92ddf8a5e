@@ -1,0 +1,12 @@
+
+[
+squid:S106:"9Replace this use of System.out or System.err by a logger.(·§Ô¼ûÿÿÿÿ8íûèûç-
+V
+squid:S106!"9Replace this use of System.out or System.err by a logger.(®öŞ8§ÇÁûç-
+[
+squid:S1064"9Replace this use of System.out or System.err by a logger.(†ñùÚşÿÿÿÿ8ØÒæûç-
+V
+squid:S106*"9Replace this use of System.out or System.err by a logger.(ë¬¿œ8¹ÈÏûç-
+ksquid:S1142"MReduce the number of returns of this method 4, down to the maximum allowed 3.(Òå»Ë8™§ø¦ò-
+tsquid:S1450"WRemove the "vertexID" field and declare it as a local variable in the relevant methods.(ü™ñ.8§şºûç-
+|squid:S1450"YRemove the "fragmentID" field and declare it as a local variable in the relevant methods.(í³çøÿÿÿÿ8È­Ëûç-

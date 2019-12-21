@@ -1,0 +1,10 @@
+
+ysquid:S1450"VRemove the "texture" field and declare it as a local variable in the relevant methods.(ºŒõ—ÿÿÿÿÿ8ÕàÏ¤ò-
+Bsquid:S1659"$Declare "height" on a separate line.(©ÂÁÛ8ÕàÏ¤ò-
+w2squid:RightCurlyBraceDifferentLineAsNextBlockCheck"2Move this "catch" keyword to a new dedicated line.(ï­£Ä8¤üİ¦ò-
+Csquid:S1166"%Either log or rethrow this exception.(ï­£Ä8¤üİ¦ò-
+dsquid:S3252 "FUse static access with "org.lwjgl.opengl.GL11" for "glDeleteTextures".(í€ş8ÕàÏ¤ò-
+jsquid:S00103"KSplit this 128 characters long line (which is greater than 120 authorized).(›Ãáÿ8¤üİ¦ò-
+Qsquid:S4248"3Refactor this code to use a "static final" Pattern.(›Ãáÿ8¤üİ¦ò-
+U
+squid:S106"9Replace this use of System.out or System.err by a logger.(®À…[8ÕàÏ¤ò-
