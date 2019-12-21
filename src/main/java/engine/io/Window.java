@@ -8,6 +8,8 @@ import org.lwjgl.opengl.GL11;
 
 import engine.maths.Vector3f;
 
+import static org.lwjgl.glfw.GLFW.*;
+
 public class Window {
     private int width, height;
     private String title;
@@ -34,6 +36,12 @@ public class Window {
         }
 
         input = new Input();
+
+        glfwWindowHint(GLFW_CONTEXT_VERSION_MAJOR, 4);
+        glfwWindowHint(GLFW_CONTEXT_VERSION_MINOR, 6);
+        glfwWindowHint(GLFW_OPENGL_PROFILE, GLFW_OPENGL_CORE_PROFILE);
+        glfwWindowHint(GLFW_OPENGL_FORWARD_COMPAT, GLFW_TRUE);
+
         window = GLFW.glfwCreateWindow(width, height, title, isFullscreen ? GLFW.glfwGetPrimaryMonitor() : 0, 0);
 
         if (window == 0) {

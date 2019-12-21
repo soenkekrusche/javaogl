@@ -2,24 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a35f3b1c-a17a-4cfd-b7dd-01f3ab7f93a4" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/engine/maths/Matrix4f.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/textures/sample.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/slick_util3.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/slick_util3.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/slick-util3.jar" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/engine/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/engine/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/engine/graphics/Material.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/engine/graphics/Material.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/engine/graphics/Mesh.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/engine/graphics/Mesh.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/engine/graphics/Renderer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/engine/graphics/Renderer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/engine/graphics/Shader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/engine/graphics/Shader.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/engine/graphics/Vertex.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/engine/graphics/Vertex.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/engine/io/Input.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/engine/io/Input.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/engine/io/Window.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/engine/io/Window.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/engine/maths/Vector2f.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/engine/maths/Vector2f.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/engine/maths/Vector3f.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/engine/maths/Vector3f.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/engine/utils/FileUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/engine/utils/FileUtils.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/shaders/mainFragment.glsl" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/shaders/mainFragment.glsl" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/shaders/mainVertex.glsl" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/shaders/mainVertex.glsl" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/engine/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/engine/Main.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/engine/graphics/Mesh.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/engine/graphics/Mesh.class" afterDir="false" />
@@ -36,12 +28,13 @@
       <change beforePath="$PROJECT_DIR$/target/classes/engine/maths/Vector2f.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/engine/maths/Vector2f.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/engine/maths/Vector3f.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/engine/maths/Vector3f.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/engine/utils/FileUtils.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/engine/utils/FileUtils.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/shaders/mainFragment.glsl" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/shaders/mainFragment.glsl" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/shaders/mainVertex.glsl" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/shaders/mainVertex.glsl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-archiver/pom.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-archiver/pom.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-archiver/pom.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/opengl-1.0-SNAPSHOT.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/opengl-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/target/opengl-1.0-SNAPSHOT.jar" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -98,16 +91,17 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="add_unversioned_files" value="$PROJECT_DIR$/hs_err_pid2740.log" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/slick-util3.jar!/" />
+    <property name="last_opened_file_path" value="$USER_HOME$/Downloads/slick-util3.jar!/" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
-    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.4735294" />
     <property name="settings.editor.selected.configurable" value="MavenSettings" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Entwicklung\projects\javaogl\src\main\java\engine\graphics" />
       <recent name="C:\Entwicklung\Projects\opengl\src\main\resources\textures" />
       <recent name="C:\Entwicklung\Projects\opengl\src\main\resources\shaders" />
     </key>
@@ -180,6 +174,14 @@
       <workItem from="1576864576415" duration="308000" />
       <workItem from="1576864901921" duration="8098000" />
     </task>
+    <task id="LOCAL-00001" summary="a">
+      <created>1576959611933</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1576959611933</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -200,6 +202,12 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
+    <option name="CHECK_NEW_TODO" value="false" />
+    <MESSAGE value="a" />
+    <option name="LAST_COMMIT_MESSAGE" value="a" />
   </component>
   <component name="WindowStateProjectService">
     <state x="2795" y="364" width="1133" height="855" key="#Project_Structure" />
@@ -260,11 +268,6 @@
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/engine/io/Window.java</url>
-          <line>7</line>
-          <option name="timeStamp" value="27" />
-        </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/engine/graphics/Material.java</url>
           <line>45</line>

@@ -19,15 +19,36 @@ public class Main implements Runnable {
     public Shader shader;
     public final int WIDTH = 1280, HEIGHT = 760;
 
-    public Mesh mesh = new Mesh(new Vertex[] {
-            new Vertex(new Vector3f(-0.5f,  0.5f, 0.0f), new Vector3f(1.0f, 0.0f, 0.0f), new Vector2f(0.0f, 0.0f)),
-            new Vertex(new Vector3f(-0.5f, -0.5f, 0.0f), new Vector3f(0.0f, 1.0f, 0.0f), new Vector2f(0.0f, 1.0f)),
-            new Vertex(new Vector3f( 0.5f, -0.5f, 0.0f), new Vector3f(0.0f, 0.0f, 1.0f), new Vector2f(1.0f, 1.0f)),
-            new Vertex(new Vector3f( 0.5f,  0.5f, 0.0f), new Vector3f(1.0f, 1.0f, 0.0f), new Vector2f(1.0f, 0.0f))
-    }, new int[] {
-            0, 1, 2,
-            0, 3, 2
-    }, new Material("/textures/sample.png"));
+    float[] positions = {
+            -0.5f, 0.5f, 0.0f,
+            -0.5f, -0.5f, 0.0f,
+            0.5f, -0.5f, 0.0f,
+            0.5f, 0.5f, 0.0f
+    };
+
+    int[] indices = {
+            0, 1, 3,
+            3, 1, 2
+    };
+
+    float[] textureCoords = {
+            0, 0,
+            0, 1,
+            1, 1,
+            1, 0
+    };
+
+    public Mesh mesh;
+
+//    public Mesh mesh = new Mesh(new Vertex[] {
+//            new Vertex(new Vector3f(-0.5f,  0.5f, 0.0f), new Vector3f(1.0f, 0.0f, 0.0f), new Vector2f(0.0f, 0.0f)),
+//            new Vertex(new Vector3f(-0.5f, -0.5f, 0.0f), new Vector3f(0.0f, 1.0f, 0.0f), new Vector2f(0.0f, 1.0f)),
+//            new Vertex(new Vector3f( 0.5f, -0.5f, 0.0f), new Vector3f(0.0f, 0.0f, 1.0f), new Vector2f(1.0f, 1.0f)),
+//            new Vertex(new Vector3f( 0.5f,  0.5f, 0.0f), new Vector3f(1.0f, 1.0f, 0.0f), new Vector2f(1.0f, 0.0f))
+//    }, new int[] {
+//            3, 0, 1,
+//            3, 1, 2
+//    }, new Material("/textures/sample.png"));
 
     public void start() {
         game = new Thread(this, "game");
@@ -39,8 +60,12 @@ public class Main implements Runnable {
         shader = new Shader("/shaders/mainVertex.glsl", "/shaders/mainFragment.glsl");
         renderer = new Renderer(shader);
         window.setBackgroundColor(1.0f, 0, 0);
+//        mesh.create();
+
+
         window.create();
-        mesh.create();
+        mesh  = new Mesh(positions, textureCoords, indices);
+
         shader.create();
     }
 
@@ -60,13 +85,17 @@ public class Main implements Runnable {
     }
 
     private void render() {
-        renderer.renderMesh(mesh);
+        mesh.setMaterial(new Material("/textures/sample.png"));
+        shader.bind();
+        mesh.render();
+        shader.unbind();
+//        renderer.renderMesh(mesh);
         window.swapBuffers();
     }
 
     private void close() {
         window.destroy();
-        mesh.destroy();
+//        mesh.destroy();
         shader.destroy();
     }
 
