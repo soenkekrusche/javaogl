@@ -1,9 +1,7 @@
 package engine.maths;
 
 public class Vector3f {
-    private float x;
-    private float y;
-    private float z;
+    private float x, y, z;
 
     public Vector3f(float x, float y, float z) {
         this.x = x;

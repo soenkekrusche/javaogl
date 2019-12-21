@@ -1,14 +1,13 @@
 package engine.graphics;
 
-import org.lwjgl.opengl.GL11;
-import org.lwjgl.opengl.GL15;
-import org.lwjgl.opengl.GL30;
-import org.lwjgl.system.MemoryUtil;
 import java.nio.FloatBuffer;
 import java.nio.IntBuffer;
 
-import static org.lwjgl.opengl.GL15.*;
-import static org.lwjgl.opengl.GL20.glVertexAttribPointer;
+import org.lwjgl.opengl.GL11;
+import org.lwjgl.opengl.GL15;
+import org.lwjgl.opengl.GL20;
+import org.lwjgl.opengl.GL30;
+import org.lwjgl.system.MemoryUtil;
 
 public class Mesh {
     private Vertex[] vertices;
@@ -47,6 +46,7 @@ public class Mesh {
             colorData[i * 3 + 2] = vertices[i].getColor().getZ();
         }
         colorBuffer.put(colorData).flip();
+
         cbo = storeData(colorBuffer, 1, 3);
 
         FloatBuffer textureBuffer = MemoryUtil.memAllocFloat(vertices.length * 2);
@@ -56,15 +56,8 @@ public class Mesh {
             textureData[i * 2 + 1] = vertices[i].getTextureCoord().getY();
         }
         textureBuffer.put(textureData).flip();
+
         tbo = storeData(textureBuffer, 2, 2);
-
-
-        pbo = GL15.glGenBuffers();
-        glBindBuffer(GL15.GL_ARRAY_BUFFER, pbo);
-        GL15.glBufferData(GL15.GL_ARRAY_BUFFER, positionBuffer, GL15.GL_STATIC_DRAW);
-        glVertexAttribPointer(0, 3, GL11.GL_FLOAT, false, 0, 0);
-        glBindBuffer(GL15.GL_ARRAY_BUFFER, 0);
-
 
         IntBuffer indicesBuffer = MemoryUtil.memAllocInt(indices.length);
         indicesBuffer.put(indices).flip();
@@ -76,12 +69,11 @@ public class Mesh {
     }
 
     private int storeData(FloatBuffer buffer, int index, int size) {
-
         int bufferID = GL15.glGenBuffers();
-        glBindBuffer(GL_ARRAY_BUFFER, bufferID);
-        glBufferData(GL_ARRAY_BUFFER, buffer, GL_STATIC_DRAW);
-        glVertexAttribPointer(index, size, GL_FLOAT, false, 0, 0);
-        glBindBuffer(GL_ARRAY_BUFFER, 0);
+        GL15.glBindBuffer(GL15.GL_ARRAY_BUFFER, bufferID);
+        GL15.glBufferData(GL15.GL_ARRAY_BUFFER, buffer, GL15.GL_STATIC_DRAW);
+        GL20.glVertexAttribPointer(index, size, GL11.GL_FLOAT, false, 0, 0);
+        GL15.glBindBuffer(GL15.GL_ARRAY_BUFFER, 0);
         return bufferID;
     }
 
@@ -116,21 +108,15 @@ public class Mesh {
         return cbo;
     }
 
-    public int getIBO() {
-        return ibo;
-    }
-
     public int getTBO() {
         return tbo;
     }
 
-    public void setTBO(int tbo) {
-        this.tbo = tbo;
+    public int getIBO() {
+        return ibo;
     }
 
     public Material getMaterial() {
         return material;
     }
-
-
 }

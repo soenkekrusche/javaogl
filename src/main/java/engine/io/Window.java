@@ -1,36 +1,25 @@
 package engine.io;
 
-import engine.maths.Vector3f;
 import org.lwjgl.glfw.GLFW;
-import org.lwjgl.glfw.GLFWErrorCallback;
 import org.lwjgl.glfw.GLFWVidMode;
 import org.lwjgl.glfw.GLFWWindowSizeCallback;
 import org.lwjgl.opengl.GL;
 import org.lwjgl.opengl.GL11;
 
-import java.io.PrintStream;
-import java.rmi.server.LogStream;
-import java.util.Objects;
-import java.util.logging.Level;
-import java.util.logging.Logger;
-
-import static org.lwjgl.glfw.GLFW.*;
+import engine.maths.Vector3f;
 
 public class Window {
-
-    private int width;
-    private int height;
+    private int width, height;
     private String title;
-    private long windowHandle;
+    private long window;
     private int frames;
-    private long time;
+    private static long time;
     private Input input;
     private Vector3f background = new Vector3f(0, 0, 0);
     private GLFWWindowSizeCallback sizeCallback;
     private boolean isResized;
     private boolean isFullscreen;
-    private int[] windowPosX = new int[1];
-    private int[] windowPosY = new int[1];
+    private int[] windowPosX = new int[1], windowPosY = new int[1];
 
     public Window(int width, int height, String title) {
         this.width = width;
@@ -38,63 +27,31 @@ public class Window {
         this.title = title;
     }
 
-
     public void create() {
-        glfwSetErrorCallback(GLFWErrorCallback.createPrint(System.err));
-
         if (!GLFW.glfwInit()) {
-            System.err.println("ERROR: GLFW wasn't initialized");
+            System.err.println("ERROR: GLFW wasn't initializied");
             return;
         }
 
         input = new Input();
-        System.out.println(glfwGetPrimaryMonitor());
+        window = GLFW.glfwCreateWindow(width, height, title, isFullscreen ? GLFW.glfwGetPrimaryMonitor() : 0, 0);
 
-        glfwWindowHint(GLFW_RESIZABLE, GL11.GL_TRUE);
-        glfwWindowHint(GLFW_CONTEXT_VERSION_MAJOR, 4);
-        glfwWindowHint(GLFW_CONTEXT_VERSION_MINOR, 5);
-        glfwWindowHint(GLFW_OPENGL_PROFILE, GLFW_OPENGL_CORE_PROFILE);
-
-        windowHandle = GLFW.glfwCreateWindow(width, height, title, isFullscreen ? GLFW.glfwGetPrimaryMonitor() : 0, 0);
-
-        if (windowHandle == 0) {
+        if (window == 0) {
             System.err.println("ERROR: Window wasn't created");
             return;
         }
 
-//        GLFWVidMode videoMode = GLFW.glfwGetVideoMode(GLFW.glfwGetPrimaryMonitor());
-//        windowPosX[0] = (Objects.requireNonNull(videoMode).width() - width) / 2;
-//        windowPosY[0] = (videoMode.height() - height) / 2;
-//        GLFW.glfwSetWindowPos(windowHandle, windowPosX[0], windowPosY[0]);
-//        GLFW.glfwMakeContextCurrent(windowHandle);
-//        GL.createCapabilities();
-//        GL11.glEnable(GL11.GL_DEPTH_TEST);
-
-        System.out.println(windowPosX[0]);
-        System.out.println(windowPosX[0]);
-
-        createCallbacks();
-
-        long monitor = glfwGetPrimaryMonitor();
-        GLFWVidMode videoMode = GLFW.glfwGetVideoMode(monitor);
-        windowPosX[0] = (Objects.requireNonNull(videoMode).width() - width) / 2;
+        GLFWVidMode videoMode = GLFW.glfwGetVideoMode(GLFW.glfwGetPrimaryMonitor());
+        windowPosX[0] = (videoMode.width() - width) / 2;
         windowPosY[0] = (videoMode.height() - height) / 2;
-        GLFW.glfwSetWindowPos(windowHandle, windowPosX[0], windowPosY[0]);
-        GLFW.glfwMakeContextCurrent(windowHandle);
+        GLFW.glfwSetWindowPos(window, windowPosX[0], windowPosY[0]);
+        GLFW.glfwMakeContextCurrent(window);
         GL.createCapabilities();
         GL11.glEnable(GL11.GL_DEPTH_TEST);
 
-        GLFW.glfwShowWindow(windowHandle);
+        createCallbacks();
 
-
-
-        int[] monitorPosX = new int[10];
-        int[] monitorPosY = new int[10];
-        GLFW.glfwGetMonitorPos(monitor, monitorPosX, monitorPosY);
-
-        int[] PosXwin = new int[10];
-        int[] PosYwin = new int[10];
-        GLFW.glfwGetWindowPos(windowHandle, PosXwin, PosYwin);
+        GLFW.glfwShowWindow(window);
 
         GLFW.glfwSwapInterval(1);
 
@@ -110,11 +67,11 @@ public class Window {
             }
         };
 
-        GLFW.glfwSetKeyCallback(windowHandle, input.getKeyboardCallback());
-        GLFW.glfwSetCursorPosCallback(windowHandle, input.getMouseMoveCallback());
-        GLFW.glfwSetMouseButtonCallback(windowHandle, input.getMouseButtonsCallback());
-        GLFW.glfwSetScrollCallback(windowHandle, input.getMouseScrollCallback());
-        GLFW.glfwSetWindowSizeCallback(windowHandle, sizeCallback);
+        GLFW.glfwSetKeyCallback(window, input.getKeyboardCallback());
+        GLFW.glfwSetCursorPosCallback(window, input.getMouseMoveCallback());
+        GLFW.glfwSetMouseButtonCallback(window, input.getMouseButtonsCallback());
+        GLFW.glfwSetScrollCallback(window, input.getMouseScrollCallback());
+        GLFW.glfwSetWindowSizeCallback(window, sizeCallback);
     }
 
     public void update() {
@@ -127,25 +84,25 @@ public class Window {
         GLFW.glfwPollEvents();
         frames++;
         if (System.currentTimeMillis() > time + 1000) {
-            GLFW.glfwSetWindowTitle(windowHandle, title + " | FPS: " + frames);
+            GLFW.glfwSetWindowTitle(window, title + " | FPS: " + frames);
             time = System.currentTimeMillis();
             frames = 0;
         }
     }
 
     public void swapBuffers() {
-        GLFW.glfwSwapBuffers(windowHandle);
+        GLFW.glfwSwapBuffers(window);
     }
 
     public boolean shouldClose() {
-        return GLFW.glfwWindowShouldClose(windowHandle);
+        return GLFW.glfwWindowShouldClose(window);
     }
 
     public void destroy() {
         input.destroy();
         sizeCallback.free();
-        GLFW.glfwWindowShouldClose(windowHandle);
-        GLFW.glfwDestroyWindow(windowHandle);
+        GLFW.glfwWindowShouldClose(window);
+        GLFW.glfwDestroyWindow(window);
         GLFW.glfwTerminate();
     }
 
@@ -161,10 +118,10 @@ public class Window {
         this.isFullscreen = isFullscreen;
         isResized = true;
         if (isFullscreen) {
-            GLFW.glfwGetWindowPos(windowHandle, windowPosX, windowPosY);
-            GLFW.glfwSetWindowMonitor(windowHandle, GLFW.glfwGetPrimaryMonitor(), 0, 0, width, height, 0);
+            GLFW.glfwGetWindowPos(window, windowPosX, windowPosY);
+            GLFW.glfwSetWindowMonitor(window, GLFW.glfwGetPrimaryMonitor(), 0, 0, width, height, 0);
         } else {
-            GLFW.glfwSetWindowMonitor(windowHandle, 0, windowPosX[0], windowPosY[0], width, height, 0);
+            GLFW.glfwSetWindowMonitor(window, 0, windowPosX[0], windowPosY[0], width, height, 0);
         }
     }
 
@@ -180,7 +137,7 @@ public class Window {
         return title;
     }
 
-    public long getWindowHandle() {
-        return windowHandle;
+    public long getWindow() {
+        return window;
     }
 }

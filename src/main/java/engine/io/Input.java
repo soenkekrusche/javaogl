@@ -9,10 +9,8 @@ import org.lwjgl.glfw.GLFWScrollCallback;
 public class Input {
     private static boolean[] keys = new boolean[GLFW.GLFW_KEY_LAST];
     private static boolean[] buttons = new boolean[GLFW.GLFW_MOUSE_BUTTON_LAST];
-    private static double mouseX;
-    private static double mouseY;
-    private double scrollX;
-    private double scrollY;
+    private static double mouseX, mouseY;
+    private static double scrollX, scrollY;
 
     private GLFWKeyCallback keyboard;
     private GLFWCursorPosCallback mouseMove;
@@ -70,11 +68,11 @@ public class Input {
         return mouseY;
     }
 
-    public double getScrollX() {
+    public static double getScrollX() {
         return scrollX;
     }
 
-    public double getScrollY() {
+    public static double getScrollY() {
         return scrollY;
     }
 

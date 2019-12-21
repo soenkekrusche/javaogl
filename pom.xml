@@ -8,8 +8,8 @@
     <artifactId>opengl</artifactId>
     <version>1.0-SNAPSHOT</version>
     <properties>
-        <lwjgl.version>3.2.3</lwjgl.version>
-        <lwjgl.natives>natives-linux</lwjgl.natives>
+        <lwjgl.version>3.2.2</lwjgl.version>
+        <lwjgl.natives>natives-windows</lwjgl.natives>
         <maven.compiler.source>11</maven.compiler.source>
         <maven.compiler.target>11</maven.compiler.target>
     </properties>
@@ -131,12 +131,5 @@
             <version>${lwjgl.version}</version>
             <classifier>${lwjgl.natives}</classifier>
         </dependency>
-
-        <dependency>
-            <groupId>org.l33tlabs.twl</groupId>
-            <artifactId>pngdecoder</artifactId>
-            <version>1.0</version>
-        </dependency>
-
     </dependencies>
 </project>

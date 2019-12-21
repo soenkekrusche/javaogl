@@ -1,11 +1,11 @@
 package engine.graphics;
 
+import java.io.IOException;
+
 import org.lwjgl.opengl.GL11;
 import org.lwjgl.opengl.GL13;
 import org.newdawn.slick.opengl.Texture;
 import org.newdawn.slick.opengl.TextureLoader;
-
-import java.io.IOException;
 
 public class Material {
     private String path;
