@@ -9,7 +9,7 @@ public class FileUtils {
     public static String loadAsString(String file) {
         StringBuilder result = new StringBuilder();
 
-        try(BufferedReader reader = new BufferedReader(new InputStreamReader(FileUtils.class.getResourceAsStream(file)));) {
+        try(BufferedReader reader = new BufferedReader(new InputStreamReader(FileUtils.class.getResourceAsStream(file)))) {
             String buffer = "";
             while((buffer = reader.readLine()) != null) {
                 result.append(buffer).append("\n");
