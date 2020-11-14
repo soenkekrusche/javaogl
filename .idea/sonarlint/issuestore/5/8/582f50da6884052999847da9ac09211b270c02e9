@@ -1,22 +1,0 @@
-
-V
-squid:S1063"9Replace this use of System.out or System.err by a logger.(†Ã§×8Ë¥“§ò-
-usquid:S00117`"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ï›Ï’ÿÿÿÿÿ8ÀŠ“¨ò-
-V
-squid:S106I"9Replace this use of System.out or System.err by a logger.(âïƒ§8ËßÞ§ò-
-`squid:UselessImportCheck"5Remove this unused import 'java.util.logging.Logger'.(ƒ¥óš8þŒážè-
-_squid:UselessImportCheck"4Remove this unused import 'java.util.logging.Level'.(…µÛ¶8äãâžè-
-esquid:S1774:"GConvert this usage of the ternary operator to an "if"/"else" structure.(«öÍÿ8¥üÝ¦ò-
-[squid:UselessImportCheck"0Remove this unused import 'java.io.PrintStream'.(×êŽ’8°’×žè-
-nsquid:CommentedOutCodeLineA"<This block of commented-out lines of code should be removed.(Ô¸šŒûÿÿÿÿ8ƒ²ˆ¨ò-
-usquid:S00117_"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(† º­þÿÿÿÿ8”ù’¨ò-
-T
-squid:S106="9Replace this use of System.out or System.err by a logger.(¢ûäˆýÿÿÿÿ
-w2squid:RightCurlyBraceDifferentLineAsNextBlockCheck¦"1Move this "else" keyword to a new dedicated line.(å¥ž‡8¥üÝ¦ò-
-V
-squid:S106."9Replace this use of System.out or System.err by a logger.(Ú´­8äãâžè-
-V
-squid:S106J"9Replace this use of System.out or System.err by a logger.(âïƒ§8ËßÞ§ò-
-fsquid:UselessImportCheck"6Remove this unused import 'java.rmi.server.LogStream'.(óøÓ§ÿÿÿÿÿ8îêÜžè-
-[
-squid:S106+"9Replace this use of System.out or System.err by a logger.(ìÃÛøûÿÿÿÿ8þŒážè-

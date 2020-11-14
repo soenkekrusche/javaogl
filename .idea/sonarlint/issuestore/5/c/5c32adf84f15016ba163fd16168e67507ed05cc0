@@ -1,10 +1,0 @@
-
-]squid:S1118":Add a private constructor to hide the implicit public one.(Ó™€¸ÿÿÿÿÿ8õÊ‹ûç-
-[
-squid:S106"9Replace this use of System.out or System.err by a logger.(–ÃğÆúÿÿÿÿ8±¡ûç-
-[
-squid:S106"9Replace this use of System.out or System.err by a logger.(²ÄÓ«ıÿÿÿÿ8œ’¢ûç-
-Csquid:S1166"%Either log or rethrow this exception.(ï­£Ä8™§ø¦ò-
-osquid:S00103"KSplit this 124 characters long line (which is greater than 120 authorized).(¬Ûÿúÿÿÿÿ8™§ø¦ò-
-w2squid:RightCurlyBraceDifferentLineAsNextBlockCheck"2Move this "catch" keyword to a new dedicated line.(ï­£Ä8™§ø¦ò-
-bsquid:S1943"?Remove this use of constructor "InputStreamReader(InputStream)"(¬Ûÿúÿÿÿÿ8™§ø¦ò-

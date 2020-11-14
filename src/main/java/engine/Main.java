@@ -1,105 +1,126 @@
 package engine;
 
-import org.lwjgl.glfw.GLFW;
 
-import engine.graphics.Material;
-import engine.graphics.Mesh;
-import engine.graphics.Renderer;
 import engine.graphics.Shader;
-import engine.graphics.Vertex;
-import engine.io.Input;
-import engine.io.Window;
-import engine.maths.Vector2f;
-import engine.maths.Vector3f;
+import engine.input.Input;
+import engine.level.Level;
+import engine.math.Matrix4f;
+import org.lwjgl.glfw.GLFWVidMode;
+import org.lwjgl.opengl.GL;
 
-public class Main implements Runnable {
-    public Thread game;
-    public Window window;
-    public Renderer renderer;
-    public Shader shader;
-    public final int WIDTH = 1280, HEIGHT = 760;
+import static org.lwjgl.glfw.GLFW.*;
+import static org.lwjgl.opengl.GL11.*;
+import static org.lwjgl.opengl.GL13.*;
+import static org.lwjgl.system.MemoryUtil.*;
 
-    float[] positions = {
-            -0.5f, 0.5f, 0.0f,
-            -0.5f, -0.5f, 0.0f,
-            0.5f, -0.5f, 0.0f,
-            0.5f, 0.5f, 0.0f
-    };
+public class Main implements Runnable{
 
-    int[] indices = {
-            0, 1, 3,
-            3, 1, 2
-    };
+    private int width = 1280;
+    private int height = 720;
 
-    float[] textureCoords = {
-            0, 0,
-            0, 1,
-            1, 1,
-            1, 0
-    };
+    private Thread thread;
+    private boolean running = false;
 
-    public Mesh mesh;
+    private long window;
 
-//    public Mesh mesh = new Mesh(new Vertex[] {
-//            new Vertex(new Vector3f(-0.5f,  0.5f, 0.0f), new Vector3f(1.0f, 0.0f, 0.0f), new Vector2f(0.0f, 0.0f)),
-//            new Vertex(new Vector3f(-0.5f, -0.5f, 0.0f), new Vector3f(0.0f, 1.0f, 0.0f), new Vector2f(0.0f, 1.0f)),
-//            new Vertex(new Vector3f( 0.5f, -0.5f, 0.0f), new Vector3f(0.0f, 0.0f, 1.0f), new Vector2f(1.0f, 1.0f)),
-//            new Vertex(new Vector3f( 0.5f,  0.5f, 0.0f), new Vector3f(1.0f, 1.0f, 0.0f), new Vector2f(1.0f, 0.0f))
-//    }, new int[] {
-//            3, 0, 1,
-//            3, 1, 2
-//    }, new Material("/textures/sample.png"));
+    private Level level;
 
     public void start() {
-        game = new Thread(this, "game");
-        game.start();
+        running = true;
+        thread = new Thread(this, "Game");
+        thread.start();
     }
 
-    public void init() {
-        window = new Window(WIDTH, HEIGHT, "Game");
-        shader = new Shader("/shaders/mainVertex.glsl", "/shaders/mainFragment.glsl");
-        renderer = new Renderer(shader);
-        window.setBackgroundColor(1.0f, 0, 0);
-//        mesh.create();
+    private void init() {
+        if (!glfwInit()) {
+            //TODO: handle it
+        }
 
+        glfwWindowHint(GLFW_RESIZABLE, GL_TRUE);
+        window = glfwCreateWindow(width, height, "Game", NULL, NULL);
 
-        window.create();
-        mesh  = new Mesh(positions, textureCoords, indices);
+        if(window == NULL) {
+            //TOOD: handle
+            return;
+        }
 
-        shader.create();
+        GLFWVidMode vidMode = glfwGetVideoMode(glfwGetPrimaryMonitor());
+        glfwSetWindowPos(window, (vidMode.width() - width) / 2, (vidMode.height() - height) / 2);
+
+        glfwSetKeyCallback(window, new Input());
+
+        glfwMakeContextCurrent(window);
+        glfwShowWindow(window);
+        GL.createCapabilities(); //call this before calling GL methods
+
+        glClearColor(1.0f, 1.0f, 1.0f, 1.0f);
+        glEnable(GL_DEPTH_TEST);
+        glActiveTexture(GL_TEXTURE1);
+        System.out.println("OpenGL: " + glGetString(GL_VERSION));
+        Shader.loadAll();
+
+        Matrix4f pr_matrix = Matrix4f.orthographic(-10.0f, 10.0f, -10.0f * 9.0f / 16.0f, 10.0f * 9.0f / 16.0f, -1.0f, 1.0f);
+        Shader.BG.setUniformMat4f("pr_matrix", pr_matrix);
+        Shader.BG.setUniform1i("tex", 1);
+
+        level = new Level();
     }
 
     public void run() {
         init();
-        while (!window.shouldClose() && !Input.isKeyDown(GLFW.GLFW_KEY_ESCAPE)) {
-            update();
+
+        long lastTime = System.nanoTime();
+        double delta = 0.0;
+        double ns = 1000000000.0 / 60.0;
+        int updates = 0;
+        int frames = 0;
+        long timer = System.currentTimeMillis();
+        while(running) {
+            long now = System.nanoTime();
+            delta+= (now - lastTime) / ns;
+            lastTime = now;
+            if(delta>=1.0) {
+                update();
+                updates++;
+                delta--;
+            }
+
             render();
-            if (Input.isKeyDown(GLFW.GLFW_KEY_F11)) window.setFullscreen(!window.isFullscreen());
+            frames++;
+            if(System.currentTimeMillis() - timer > 1000) {
+                timer+=1000;
+                System.out.println(updates + "ups, " + frames + " fps");
+                updates = 0;
+                frames = 0;
+            }
+            if(glfwWindowShouldClose(window)) {
+                running = false;
+            }
         }
-        close();
     }
 
     private void update() {
-        window.update();
-        if (Input.isButtonDown(GLFW.GLFW_MOUSE_BUTTON_LEFT)) System.out.println("X: " + Input.getScrollX() + ", Y: " + Input.getScrollY());
+        glfwPollEvents();
+        level.update();
+        if(Input.keys[GLFW_KEY_SPACE]) {
+            System.out.println("FLAP!");
+        }
     }
 
     private void render() {
-        mesh.setMaterial(new Material("/textures/sample.png"));
-        shader.bind();
-        mesh.render();
-        shader.unbind();
-//        renderer.renderMesh(mesh);
-        window.swapBuffers();
-    }
+        glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
+        level.render();
 
-    private void close() {
-        window.destroy();
-//        mesh.destroy();
-        shader.destroy();
+        int err = glGetError();
+        if( err != GL_NO_ERROR) {
+            System.out.println(err);
+        }
+        glfwSwapBuffers(window);
+
     }
 
     public static void main(String[] args) {
         new Main().start();
+
     }
 }
