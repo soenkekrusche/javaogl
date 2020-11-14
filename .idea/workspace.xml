@@ -1,42 +1,36 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="ALL" />
+  </component>
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="BRANCH:master" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </select>
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="a35f3b1c-a17a-4cfd-b7dd-01f3ab7f93a4" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/slick_util3.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/slick_util3.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/slick-util3.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/engine/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/engine/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/engine/graphics/Mesh.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/engine/graphics/Mesh.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/engine/graphics/Renderer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/engine/graphics/Renderer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/engine/io/Window.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/engine/io/Window.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/shaders/mainFragment.glsl" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/shaders/mainFragment.glsl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/shaders/mainVertex.glsl" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/shaders/mainVertex.glsl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/engine/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/engine/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/engine/graphics/Mesh.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/engine/graphics/Mesh.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/engine/graphics/Renderer.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/engine/graphics/Renderer.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/engine/graphics/Shader.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/engine/graphics/Shader.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/engine/graphics/Vertex.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/engine/graphics/Vertex.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/engine/io/Input$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/engine/io/Input$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/engine/io/Input$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/engine/io/Input$2.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/engine/io/Input$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/engine/io/Input$3.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/engine/io/Input$4.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/engine/io/Input$4.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/engine/io/Input.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/engine/io/Input.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/engine/io/Window$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/engine/io/Window$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/engine/io/Window.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/engine/io/Window.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/engine/maths/Vector2f.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/engine/maths/Vector2f.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/engine/maths/Vector3f.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/engine/maths/Vector3f.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/engine/utils/FileUtils.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/engine/utils/FileUtils.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/shaders/mainFragment.glsl" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/shaders/mainFragment.glsl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/shaders/mainVertex.glsl" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/shaders/mainVertex.glsl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-archiver/pom.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-archiver/pom.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/opengl-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/target/opengl-1.0-SNAPSHOT.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
     </list>
-    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -44,9 +38,6 @@
   </component>
   <component name="CodeStyleSettingsInfer">
     <option name="done" value="true" />
-  </component>
-  <component name="FavoritesManager">
-    <favorites_list name="opengl" />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -66,14 +57,9 @@
   <component name="MavenImportPreferences">
     <option name="generalSettings">
       <MavenGeneralSettings>
-        <option name="mavenHome" value="$PROJECT_DIR$/../../Tools/apache-maven-3.6.0" />
+        <option name="mavenHome" value="C:\Entwicklung\Tools\apache-maven-3.6.0" />
         <option name="userSettingsFile" value="C:\Entwicklung\Tools\apache-maven-3.6.0\conf\settings.xml" />
       </MavenGeneralSettings>
-    </option>
-    <option name="importingSettings">
-      <MavenImportingSettings>
-        <option name="importAutomatically" value="true" />
-      </MavenImportingSettings>
     </option>
   </component>
   <component name="ProjectCodeStyleSettingsMigration">
@@ -82,7 +68,6 @@
   <component name="ProjectId" id="1TnEOstBmsmQedzFWPiaQvAaE0h" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
-    <option name="showExcludedFiles" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
@@ -115,18 +100,6 @@
       <recent name="engine.io" />
     </key>
   </component>
-  <component name="RunDashboard">
-    <option name="ruleStates">
-      <list>
-        <RuleState>
-          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
-        </RuleState>
-        <RuleState>
-          <option name="name" value="StatusDashboardGroupingRule" />
-        </RuleState>
-      </list>
-    </option>
-  </component>
   <component name="RunManager">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="engine.Main" />
@@ -140,9 +113,6 @@
         <item itemvalue="Application.Main" />
       </list>
     </recent_temporary>
-  </component>
-  <component name="ServiceViewManager">
-    <option name="showServicesTree" value="false" />
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -195,13 +165,12 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State>
-              <option name="COLUMN_ORDER" />
-            </State>
+            <State />
           </value>
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
@@ -210,60 +179,64 @@
     <option name="LAST_COMMIT_MESSAGE" value="a" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="2795" y="364" width="1133" height="855" key="#Project_Structure" />
-    <state x="2795" y="364" width="1133" height="855" key="#Project_Structure/1920.0.2560.1440/0.323.1920.1080@1920.0.2560.1440" />
-    <state x="2791" y="364" width="804" height="677" key="#Updates" />
-    <state x="2791" y="364" width="804" height="677" key="#Updates/1920.0.2560.1440/0.323.1920.1080@1920.0.2560.1440" />
-    <state x="2917" y="507" width="559" height="390" key="#com.intellij.fileTypes.FileTypeChooser" />
-    <state x="2917" y="507" width="559" height="390" key="#com.intellij.fileTypes.FileTypeChooser/1920.0.2560.1440/0.323.1920.1080@1920.0.2560.1440" />
-    <state x="3008" y="389" width="378" height="626" key="#com.intellij.ide.util.MemberChooser" />
-    <state x="3008" y="389" width="378" height="626" key="#com.intellij.ide.util.MemberChooser/1920.0.2560.1440/0.323.1920.1080@1920.0.2560.1440" />
-    <state x="2883" y="439" width="628" height="526" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog" />
-    <state x="2883" y="439" width="628" height="526" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog/1920.0.2560.1440/0.323.1920.1080@1920.0.2560.1440" />
-    <state x="2907" y="374" width="580" height="657" key="#com.intellij.refactoring.encapsulateFields.EncalpsulateFieldsDialog" />
-    <state x="2907" y="374" width="580" height="657" key="#com.intellij.refactoring.encapsulateFields.EncalpsulateFieldsDialog/1920.0.2560.1440/0.323.1920.1080@1920.0.2560.1440" />
-    <state x="2933" y="451" width="528" height="502" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" />
-    <state x="2933" y="451" width="528" height="502" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/1920.0.2560.1440/0.323.1920.1080@1920.0.2560.1440" />
-    <state x="3118" y="507" width="480" height="568" key="DetectedRootsChooserDialog" />
-    <state x="3118" y="507" width="480" height="568" key="DetectedRootsChooserDialog/1920.0.2560.1440/0.323.1920.1080@1920.0.2560.1440" />
-    <state x="3036" y="535" width="798" height="513" key="FileChooserDialogImpl" />
-    <state x="3036" y="535" width="798" height="513" key="FileChooserDialogImpl/1920.0.2560.1440/0.323.1920.1080@1920.0.2560.1440" />
-    <state width="2514" height="484" key="GridCell.Tab.0.bottom" />
-    <state width="2514" height="484" key="GridCell.Tab.0.bottom/1920.0.2560.1440/0.323.1920.1080@1920.0.2560.1440" />
-    <state width="2514" height="484" key="GridCell.Tab.0.center" />
-    <state width="2514" height="484" key="GridCell.Tab.0.center/1920.0.2560.1440/0.323.1920.1080@1920.0.2560.1440" />
-    <state width="2514" height="484" key="GridCell.Tab.0.left" />
-    <state width="2514" height="484" key="GridCell.Tab.0.left/1920.0.2560.1440/0.323.1920.1080@1920.0.2560.1440" />
-    <state width="2514" height="484" key="GridCell.Tab.0.right" />
-    <state width="2514" height="484" key="GridCell.Tab.0.right/1920.0.2560.1440/0.323.1920.1080@1920.0.2560.1440" />
-    <state width="2514" height="484" key="GridCell.Tab.1.bottom" />
-    <state width="2514" height="484" key="GridCell.Tab.1.bottom/1920.0.2560.1440/0.323.1920.1080@1920.0.2560.1440" />
-    <state width="2514" height="484" key="GridCell.Tab.1.center" />
-    <state width="2514" height="484" key="GridCell.Tab.1.center/1920.0.2560.1440/0.323.1920.1080@1920.0.2560.1440" />
-    <state width="2514" height="484" key="GridCell.Tab.1.left" />
-    <state width="2514" height="484" key="GridCell.Tab.1.left/1920.0.2560.1440/0.323.1920.1080@1920.0.2560.1440" />
-    <state width="2514" height="484" key="GridCell.Tab.1.right" />
-    <state width="2514" height="484" key="GridCell.Tab.1.right/1920.0.2560.1440/0.323.1920.1080@1920.0.2560.1440" />
-    <state x="2733" y="360" width="928" height="684" key="Maven.ArtifactSearchDialog" />
-    <state x="2733" y="360" width="928" height="684" key="Maven.ArtifactSearchDialog/1920.0.2560.1440/0.323.1920.1080@1920.0.2560.1440" />
-    <state x="2696" y="337" width="1177" height="730" key="SettingsEditor" />
-    <state x="2696" y="337" width="1177" height="730" key="SettingsEditor/1920.0.2560.1440/0.323.1920.1080@1920.0.2560.1440" />
-    <state x="2956" y="566" key="cloudConfig.PluginsDialog" />
-    <state x="2956" y="566" key="cloudConfig.PluginsDialog/1920.0.2560.1440/0.323.1920.1080@1920.0.2560.1440" />
-    <state x="2894" y="526" width="478" height="307" key="cloudConfig.SelfSettingsDialog" />
-    <state x="2894" y="526" width="478" height="307" key="cloudConfig.SelfSettingsDialog/1920.0.2560.1440/0.323.1920.1080@1920.0.2560.1440" />
-    <state x="2879" y="547" key="com.intellij.ide.util.TipDialog" />
-    <state x="2879" y="547" key="com.intellij.ide.util.TipDialog/1920.0.2560.1440/0.323.1920.1080@1920.0.2560.1440" />
-    <state x="2821" y="321" width="752" height="763" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" />
-    <state x="2821" y="321" width="752" height="763" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/1920.0.2560.1440/0.323.1920.1080@1920.0.2560.1440" />
-    <state x="2873" y="306" width="653" height="792" key="find.popup" />
-    <state x="2873" y="306" width="653" height="792" key="find.popup/1920.0.2560.1440/0.323.1920.1080@1920.0.2560.1440" />
-    <state x="2847" y="421" width="700" height="530" key="recent.locations.popup" />
-    <state x="2847" y="421" width="700" height="530" key="recent.locations.popup/1920.0.2560.1440/0.323.1920.1080@1920.0.2560.1440" />
-    <state x="2862" y="328" key="run.anything.popup" />
-    <state x="2862" y="328" key="run.anything.popup/1920.0.2560.1440/0.323.1920.1080@1920.0.2560.1440" />
-    <state x="2863" y="320" width="672" height="678" key="search.everywhere.popup" />
-    <state x="2863" y="320" width="672" height="678" key="search.everywhere.popup/1920.0.2560.1440/0.323.1920.1080@1920.0.2560.1440" />
+    <state x="2795" y="364" width="1133" height="855" key="#Project_Structure" timestamp="1605358550016" />
+    <state x="2795" y="364" width="1133" height="855" key="#Project_Structure/1920.0.2560.1440/0.323.1920.1080@1920.0.2560.1440" timestamp="1605358550016" />
+    <state x="2791" y="364" width="804" height="677" key="#Updates" timestamp="1605358550016" />
+    <state x="2791" y="364" width="804" height="677" key="#Updates/1920.0.2560.1440/0.323.1920.1080@1920.0.2560.1440" timestamp="1605358550016" />
+    <state x="2917" y="507" width="559" height="390" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1605358550016" />
+    <state x="2917" y="507" width="559" height="390" key="#com.intellij.fileTypes.FileTypeChooser/1920.0.2560.1440/0.323.1920.1080@1920.0.2560.1440" timestamp="1605358550016" />
+    <state x="3008" y="389" width="378" height="626" key="#com.intellij.ide.util.MemberChooser" timestamp="1605358550016" />
+    <state x="3008" y="389" width="378" height="626" key="#com.intellij.ide.util.MemberChooser/1920.0.2560.1440/0.323.1920.1080@1920.0.2560.1440" timestamp="1605358550016" />
+    <state x="2883" y="439" width="628" height="526" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog" timestamp="1605358550016" />
+    <state x="2883" y="439" width="628" height="526" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog/1920.0.2560.1440/0.323.1920.1080@1920.0.2560.1440" timestamp="1605358550016" />
+    <state x="2907" y="374" width="580" height="657" key="#com.intellij.refactoring.encapsulateFields.EncalpsulateFieldsDialog" timestamp="1605358550016" />
+    <state x="2907" y="374" width="580" height="657" key="#com.intellij.refactoring.encapsulateFields.EncalpsulateFieldsDialog/1920.0.2560.1440/0.323.1920.1080@1920.0.2560.1440" timestamp="1605358550016" />
+    <state x="2933" y="451" width="528" height="502" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1605358550016" />
+    <state x="2933" y="451" width="528" height="502" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/1920.0.2560.1440/0.323.1920.1080@1920.0.2560.1440" timestamp="1605358550016" />
+    <state x="3118" y="507" width="480" height="568" key="DetectedRootsChooserDialog" timestamp="1605358550016" />
+    <state x="3118" y="507" width="480" height="568" key="DetectedRootsChooserDialog/1920.0.2560.1440/0.323.1920.1080@1920.0.2560.1440" timestamp="1605358550016" />
+    <state x="3036" y="535" width="798" height="513" key="FileChooserDialogImpl" timestamp="1605358550016" />
+    <state x="3036" y="535" width="798" height="513" key="FileChooserDialogImpl/1920.0.2560.1440/0.323.1920.1080@1920.0.2560.1440" timestamp="1605358550016" />
+    <state width="2514" height="484" key="GridCell.Tab.0.bottom" timestamp="1605358550016" />
+    <state width="2514" height="484" key="GridCell.Tab.0.bottom/1920.0.2560.1440/0.323.1920.1080@1920.0.2560.1440" timestamp="1605358550016" />
+    <state width="2514" height="484" key="GridCell.Tab.0.center" timestamp="1605358550016" />
+    <state width="2514" height="484" key="GridCell.Tab.0.center/1920.0.2560.1440/0.323.1920.1080@1920.0.2560.1440" timestamp="1605358550016" />
+    <state width="2514" height="484" key="GridCell.Tab.0.left" timestamp="1605358550016" />
+    <state width="2514" height="484" key="GridCell.Tab.0.left/1920.0.2560.1440/0.323.1920.1080@1920.0.2560.1440" timestamp="1605358550016" />
+    <state width="2514" height="484" key="GridCell.Tab.0.right" timestamp="1605358550016" />
+    <state width="2514" height="484" key="GridCell.Tab.0.right/1920.0.2560.1440/0.323.1920.1080@1920.0.2560.1440" timestamp="1605358550016" />
+    <state width="2514" height="484" key="GridCell.Tab.1.bottom" timestamp="1605358550016" />
+    <state width="2514" height="484" key="GridCell.Tab.1.bottom/1920.0.2560.1440/0.323.1920.1080@1920.0.2560.1440" timestamp="1605358550016" />
+    <state width="2514" height="484" key="GridCell.Tab.1.center" timestamp="1605358550016" />
+    <state width="2514" height="484" key="GridCell.Tab.1.center/1920.0.2560.1440/0.323.1920.1080@1920.0.2560.1440" timestamp="1605358550016" />
+    <state width="2514" height="484" key="GridCell.Tab.1.left" timestamp="1605358550016" />
+    <state width="2514" height="484" key="GridCell.Tab.1.left/1920.0.2560.1440/0.323.1920.1080@1920.0.2560.1440" timestamp="1605358550016" />
+    <state width="2514" height="484" key="GridCell.Tab.1.right" timestamp="1605358550016" />
+    <state width="2514" height="484" key="GridCell.Tab.1.right/1920.0.2560.1440/0.323.1920.1080@1920.0.2560.1440" timestamp="1605358550016" />
+    <state x="2733" y="360" width="928" height="684" key="Maven.ArtifactSearchDialog" timestamp="1605358550016" />
+    <state x="2733" y="360" width="928" height="684" key="Maven.ArtifactSearchDialog/1920.0.2560.1440/0.323.1920.1080@1920.0.2560.1440" timestamp="1605358550016" />
+    <state x="2696" y="337" width="1177" height="730" key="SettingsEditor" timestamp="1605358550016" />
+    <state x="2696" y="337" width="1177" height="730" key="SettingsEditor/1920.0.2560.1440/0.323.1920.1080@1920.0.2560.1440" timestamp="1605358550016" />
+    <state x="2956" y="566" key="cloudConfig.PluginsDialog" timestamp="1605358550016" />
+    <state x="2956" y="566" key="cloudConfig.PluginsDialog/1920.0.2560.1440/0.323.1920.1080@1920.0.2560.1440" timestamp="1605358550016" />
+    <state x="2894" y="526" width="478" height="307" key="cloudConfig.SelfSettingsDialog" timestamp="1605358550016" />
+    <state x="2894" y="526" width="478" height="307" key="cloudConfig.SelfSettingsDialog/1920.0.2560.1440/0.323.1920.1080@1920.0.2560.1440" timestamp="1605358550016" />
+    <state x="92" y="92" width="2376" height="1216" key="com.intellij.history.integration.ui.views.FileHistoryDialog" timestamp="1605358673362">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state x="92" y="92" width="2376" height="1216" key="com.intellij.history.integration.ui.views.FileHistoryDialog/0.0.2560.1400@0.0.2560.1400" timestamp="1605358673362" />
+    <state x="2879" y="547" key="com.intellij.ide.util.TipDialog" timestamp="1605358550016" />
+    <state x="2879" y="547" key="com.intellij.ide.util.TipDialog/1920.0.2560.1440/0.323.1920.1080@1920.0.2560.1440" timestamp="1605358550016" />
+    <state x="2821" y="321" width="752" height="763" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1605358550016" />
+    <state x="2821" y="321" width="752" height="763" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/1920.0.2560.1440/0.323.1920.1080@1920.0.2560.1440" timestamp="1605358550016" />
+    <state x="2873" y="306" width="653" height="792" key="find.popup" timestamp="1605358550016" />
+    <state x="2873" y="306" width="653" height="792" key="find.popup/1920.0.2560.1440/0.323.1920.1080@1920.0.2560.1440" timestamp="1605358550016" />
+    <state x="2847" y="421" width="700" height="530" key="recent.locations.popup" timestamp="1605358550016" />
+    <state x="2847" y="421" width="700" height="530" key="recent.locations.popup/1920.0.2560.1440/0.323.1920.1080@1920.0.2560.1440" timestamp="1605358550016" />
+    <state x="2862" y="328" key="run.anything.popup" timestamp="1605358550016" />
+    <state x="2862" y="328" key="run.anything.popup/1920.0.2560.1440/0.323.1920.1080@1920.0.2560.1440" timestamp="1605358550016" />
+    <state x="2863" y="320" width="672" height="678" key="search.everywhere.popup" timestamp="1605358550016" />
+    <state x="2863" y="320" width="672" height="678" key="search.everywhere.popup/1920.0.2560.1440/0.323.1920.1080@1920.0.2560.1440" timestamp="1605358550016" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
