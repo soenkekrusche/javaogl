@@ -11,12 +11,12 @@ import org.lwjgl.opengl.GL;
 import static org.lwjgl.glfw.GLFW.*;
 import static org.lwjgl.opengl.GL11.*;
 import static org.lwjgl.opengl.GL13.*;
-import static org.lwjgl.system.MemoryUtil.*;
+import static org.lwjgl.system.MemoryUtil.NULL;
 
-public class Main implements Runnable{
+public class Main implements Runnable {
 
-    private int width = 1280;
-    private int height = 720;
+    private static final int WIDTH = 1280;
+    private static final int HEIGHT = 720;
 
     private Thread thread;
     private boolean running = false;
@@ -33,24 +33,30 @@ public class Main implements Runnable{
 
     private void init() {
         if (!glfwInit()) {
-            //TODO: handle it
+            System.err.println("Failed at GLFW initialization");
+            return;
         }
 
         glfwWindowHint(GLFW_RESIZABLE, GL_TRUE);
-        window = glfwCreateWindow(width, height, "Game", NULL, NULL);
+        window = glfwCreateWindow(WIDTH, HEIGHT, "Game", NULL, NULL);
 
-        if(window == NULL) {
-            //TOOD: handle
+        if (window == NULL) {
+            System.err.println("Error while creating window!");
             return;
         }
 
         GLFWVidMode vidMode = glfwGetVideoMode(glfwGetPrimaryMonitor());
-        glfwSetWindowPos(window, (vidMode.width() - width) / 2, (vidMode.height() - height) / 2);
+        if (vidMode == null) {
+            System.err.println("Error while retrieving video mode or primary monitor!");
+            return;
+        }
 
+        glfwSetWindowPos(window, (vidMode.width() - WIDTH) / 2, (vidMode.height() - HEIGHT) / 2);
         glfwSetKeyCallback(window, new Input());
 
         glfwMakeContextCurrent(window);
         glfwShowWindow(window);
+        glfwSwapInterval(1);
         GL.createCapabilities(); //call this before calling GL methods
 
         glClearColor(1.0f, 1.0f, 1.0f, 1.0f);
@@ -59,9 +65,15 @@ public class Main implements Runnable{
         System.out.println("OpenGL: " + glGetString(GL_VERSION));
         Shader.loadAll();
 
-        Matrix4f pr_matrix = Matrix4f.orthographic(-10.0f, 10.0f, -10.0f * 9.0f / 16.0f, 10.0f * 9.0f / 16.0f, -1.0f, 1.0f);
+        Matrix4f pr_matrix = Matrix4f.orthographic(
+                -10.0f, 10.0f,
+                -10.0f * 9.0f / 16.0f, 10.0f * 9.0f / 16.0f,
+                -1.0f, 1.0f);
         Shader.BG.setUniformMat4f("pr_matrix", pr_matrix);
         Shader.BG.setUniform1i("tex", 1);
+        Shader.BIRD.setUniformMat4f("pr_matrix", pr_matrix);
+        Shader.BIRD.setUniform1i("tex", 1);
+
 
         level = new Level();
     }
@@ -75,11 +87,11 @@ public class Main implements Runnable{
         int updates = 0;
         int frames = 0;
         long timer = System.currentTimeMillis();
-        while(running) {
+        while (running) {
             long now = System.nanoTime();
-            delta+= (now - lastTime) / ns;
+            delta += (now - lastTime) / ns;
             lastTime = now;
-            if(delta>=1.0) {
+            if (delta >= 1.0) {
                 update();
                 updates++;
                 delta--;
@@ -87,13 +99,13 @@ public class Main implements Runnable{
 
             render();
             frames++;
-            if(System.currentTimeMillis() - timer > 1000) {
-                timer+=1000;
+            if (System.currentTimeMillis() - timer > 1000) {
+                timer += 1000;
                 System.out.println(updates + "ups, " + frames + " fps");
                 updates = 0;
                 frames = 0;
             }
-            if(glfwWindowShouldClose(window)) {
+            if (glfwWindowShouldClose(window)) {
                 running = false;
             }
         }
@@ -102,7 +114,7 @@ public class Main implements Runnable{
     private void update() {
         glfwPollEvents();
         level.update();
-        if(Input.keys[GLFW_KEY_SPACE]) {
+        if (Input.keys[GLFW_KEY_SPACE]) {
             System.out.println("FLAP!");
         }
     }
@@ -112,15 +124,14 @@ public class Main implements Runnable{
         level.render();
 
         int err = glGetError();
-        if( err != GL_NO_ERROR) {
+        if (err != GL_NO_ERROR) {
             System.out.println(err);
+            return;
         }
         glfwSwapBuffers(window);
-
     }
 
     public static void main(String[] args) {
         new Main().start();
-
     }
 }

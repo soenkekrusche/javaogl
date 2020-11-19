@@ -1,12 +1,10 @@
 package engine.graphics;
 
 import engine.utils.BufferUtils;
-import engine.utils.FileUtils;
 
 import javax.imageio.ImageIO;
 import java.awt.image.BufferedImage;
 import java.io.IOException;
-import java.io.InputStreamReader;
 import java.util.Objects;
 
 import static org.lwjgl.opengl.GL11.*;
@@ -14,7 +12,7 @@ import static org.lwjgl.opengl.GL11.*;
 public class Texture {
 
     private int width, height;
-    private int texture;
+    private final int texture;
 
     public Texture(String path) {
         texture = load(path);
@@ -30,6 +28,7 @@ public class Texture {
             image.getRGB(0, 0, width, height, pixels, 0, width);
         } catch (IOException e) {
             e.printStackTrace();
+            System.exit(0); //handle this in some way - return 0 to the call stack?
         }
 
         int[] data = new int[width * height];

@@ -8,12 +8,14 @@ import engine.math.Vector3f;
 
 public class Level {
 
-    private VertexArray background;
+    private final VertexArray background;
 
-    private Texture bgTexture;
+    private final Texture bgTexture;
 
     private int xScroll = 0;
     private int map = 0;
+
+    private Bird bird;
 
     public Level() {
         float[] vertices = new float[]{
@@ -38,13 +40,16 @@ public class Level {
 
         background = new VertexArray(vertices, indices, tcs);
         bgTexture = new Texture("textures/bg.jpeg");
+
+        bird = new Bird();
     }
 
     public void update() {
         xScroll--;
-        if(-xScroll % 350 == 0) {
+        if(-xScroll % 335 == 0) {
             map++;
         }
+        bird.update();
     }
 
     public void render() {
@@ -57,5 +62,7 @@ public class Level {
         }
         Shader.BG.disable();
         bgTexture.unbind();
+
+        bird.render();
     }
 }

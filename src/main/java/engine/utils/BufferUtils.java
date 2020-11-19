@@ -7,7 +7,8 @@ import java.nio.IntBuffer;
 
 public class BufferUtils {
 
-    private BufferUtils() {}
+    private BufferUtils() {
+    }
 
     public static ByteBuffer createByteBuffer(byte[] array) {
         ByteBuffer result = ByteBuffer.allocateDirect(array.length).order(ByteOrder.nativeOrder());

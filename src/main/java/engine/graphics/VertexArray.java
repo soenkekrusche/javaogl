@@ -9,8 +9,8 @@ import static org.lwjgl.opengl.GL20.*;
 
 public class VertexArray {
 
-    private int vao, vbo, ibo, tbo;
-    private int count;
+    private final int vao, vbo, ibo, tbo;
+    private final int count;
 
     public VertexArray(float[] vertices, byte[] indices, float[] textureCoordinates) {
         count = indices.length;
